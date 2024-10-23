@@ -15,8 +15,16 @@ public class Book {
 		return this.title;
 	}
 	
+	public boolean getAvailability() {
+		return this.isAvailable;
+	}
+	
 	// setters
 	public void setTitle(String name) {
 		this.title = name;
+	}
+	
+	public void setAvailability(Boolean available) {
+		this.isAvailable = available;
 	}
 }
