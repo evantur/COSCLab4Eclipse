@@ -15,4 +15,8 @@ public class Book {
 		return this.title;
 	}
 	
+	// setters
+	public void setTitle(String name) {
+		this.title = name;
+	}
 }
