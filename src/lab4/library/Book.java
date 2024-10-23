@@ -8,6 +8,23 @@ public class Book {
 	private boolean isAvailable; 
 	
 	// TODO: implement Book functionality 
-	// test
 	
+	
+	// getters
+	public String getTitle() {
+		return this.title;
+	}
+	
+	public boolean getAvailability() {
+		return this.isAvailable;
+	}
+	
+	// setters
+	public void setTitle(String name) {
+		this.title = name;
+	}
+	
+	public void setAvailability(Boolean available) {
+		this.isAvailable = available;
+	}
 }
