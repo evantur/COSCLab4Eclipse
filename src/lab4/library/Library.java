@@ -14,9 +14,9 @@ public class Library {
 	
 	// Methods:
 	// Adds a book to the library catalog
-	public void addBook(String bookName) {
-	    catalog.add(bookName);
-	    System.out.println(bookName + " has been added to the catalog.");
+	public void addBook(Book book) {
+	    catalog.add(book);
+	    System.out.println(book.getTitle() + " has been added to the catalog.");
 	}
 	
 	// Adds a new member to the library (without a separate class)
@@ -45,11 +45,12 @@ public class Library {
 	
 	//find book by title
 	public Book findBookByTitle(String title) {
-		if(catalog.indexOf(title) == -1) {
-			System.out.println("The book " + title + " is not available");
-		}else {
-			System.out.println("The book " + title + " is available");
+		for (Book book : catalog) {
+			if (book.getTitle() == title) {
+				return book;
+			}
 		}
+		return null;
 	}
 	
 	// Show the available books in the library
