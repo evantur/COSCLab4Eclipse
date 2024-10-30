@@ -14,7 +14,7 @@ public class Member {
 	private HashMap<String, ArrayList<String>> borrowedBooks = new HashMap<>();
 	
 	
-	public void borrowBook(String bookName, String memberName) {
+	public void borrowBook(Book book) {
 	     if (!borrowedBooks.containsKey(memberName)) {
 	         System.out.println("Member " + memberName + " not found.");
 	         return;

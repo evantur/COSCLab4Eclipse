@@ -27,36 +27,11 @@ public class Library {
 	    	
 	    }
 	}
-	
-	// Borrow a book from the library
+	// borrow book
 	public void borrowBook(String bookName, String memberName) {
-	    if (!registeredMembers.containsKey(memberName)) {
-	        System.out.println("Member " + memberName + " not found.");
-	        return;
-	    }
-
-	    if (catalog.contains(bookName)) {
-	        catalog.remove(bookName);
-	        registeredMembers.get(memberName).add(bookName);
-	        System.out.println(memberName + " has successfully borrowed " + bookName);
-	    } else {
-	        System.out.println(bookName + " is either already borrowed or not available.");
-	    }
-	}
-	// Return a book to the library
-	public void returnBook(String bookName, String memberName) {
-	    if (!registeredMembers.containsKey(memberName)) {
-	        System.out.println("Member " + memberName + " not found.");
-	        return;
-	    }
-
-	    if (registeredMembers.get(memberName).contains(bookName)) {
-	        registeredMembers.get(memberName).remove(bookName);
-	        catalog.add(bookName);
-	        System.out.println(memberName + " has successfully returned " + bookName);
-	    } else {
-	        System.out.println(memberName + " didn't borrow " + bookName);
-	    }
+		Book book = findBookByTitle(bookName);
+		Member member = findMemberByName(memberName);
+		member.borrowBook(book);
 	}
 	// Find member and if found print name
 	public Member findMemberByName(String name) {
@@ -69,7 +44,7 @@ public class Library {
 	}
 	
 	//find book by title
-	public void findBookByTitle(String title) {
+	public Book findBookByTitle(String title) {
 		if(catalog.indexOf(title) == -1) {
 			System.out.println("The book " + title + " is not available");
 		}else {
