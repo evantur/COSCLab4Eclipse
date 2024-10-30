@@ -9,8 +9,8 @@ public class Library {
 	
 	
 	// Attributes:	
-	private ArrayList<String> availableBooks = new ArrayList<>();
-	private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
+	public ArrayList<String> availableBooks = new ArrayList<>();
+	public HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
 	
 	
 	// Methods:
