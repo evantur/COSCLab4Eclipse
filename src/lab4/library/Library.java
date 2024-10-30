@@ -10,7 +10,8 @@ public class Library {
 	
 	// Attributes:	
 	public ArrayList<String> availableBooks = new ArrayList<>();
-	public HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
+	public ArrayList<Member> registeredMembers = new ArrayList<>();
+	// public HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
 	
 	
 	// Methods:
@@ -22,11 +23,10 @@ public class Library {
 	
 	// Adds a new member to the library (without a separate class)
 	public void registerMember(String memberName) {
-	    if (!memberBorrowedBooks.containsKey(memberName)) {
-	        memberBorrowedBooks.put(memberName, new ArrayList<>());
-	        System.out.println("Member " + memberName + " has been added.");
+	    if (!registeredMembers.contains(memberName)) {
+	    	
 	    } else {
-	        System.out.println("Member " + memberName + " already exists.");
+	    	
 	    }
 	}
 	
@@ -61,9 +61,9 @@ public class Library {
 	    }
 	}
 	// Find member and if found print name
-	public void findMemberByName(String name) {
+	public Member findMemberByName(String name) {
 		if (memberBorrowedBooks.containsKey(name)) {
-			System.out.println(name + " has been registered already.");
+			return memberBorrowedBooks
 		}
 		else {
 			System.out.println(name + " has not yet been registered.");
