@@ -8,14 +8,10 @@ import java.util.Scanner;
 
 public class LibraryApp {
 
- private ArrayList<String> availableBooks = new ArrayList<>();
+
  private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
 
- // Adds a book to the library catalog
- public void addBook(String bookName) {
-     availableBooks.add(bookName);
-     System.out.println(bookName + " has been added to the catalog.");
- }
+
 
  // Adds a new member to the library (without a separate class)
  public void addMember(String memberName) {

@@ -7,12 +7,16 @@ public class Library {
 	//	Track which books are borrowed and available
 	
 	
-	// Attributes:
-	// catalog stores names of books
-	private ArrayList<String> catalog = new ArrayList<>();
-	// members stores names of members
-	private ArrayList<String> members = new ArrayList<>();
-
+	// Attributes:	
+	private ArrayList<String> availableBooks = new ArrayList<>();
+	
+	
+	// Methods: 
+	// Adds a book to the library catalog
+	public void addBook(String bookName) {
+	    availableBooks.add(bookName);
+	    System.out.println(bookName + " has been added to the catalog.");
+	}
 	// TODO: implement functionality of Member class
 
 }
