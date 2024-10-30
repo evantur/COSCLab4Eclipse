@@ -9,61 +9,34 @@ public class Library {
 	
 	
 	// Attributes:	
-	private ArrayList<String> availableBooks = new ArrayList<>();
-	private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
-	
+	public ArrayList<Book> catalog = new ArrayList<>();
+	public ArrayList<Member> registeredMembers = new ArrayList<>();	
 	
 	// Methods:
 	// Adds a book to the library catalog
 	public void addBook(String bookName) {
-	    availableBooks.add(bookName);
+	    catalog.add(bookName);
 	    System.out.println(bookName + " has been added to the catalog.");
 	}
 	
 	// Adds a new member to the library (without a separate class)
 	public void registerMember(String memberName) {
-	    if (!memberBorrowedBooks.containsKey(memberName)) {
-	        memberBorrowedBooks.put(memberName, new ArrayList<>());
-	        System.out.println("Member " + memberName + " has been added.");
+	    if (!registeredMembers.contains(memberName)) {
+	    	
 	    } else {
-	        System.out.println("Member " + memberName + " already exists.");
+	    	
 	    }
 	}
-	
-	// Borrow a book from the library
+	// borrow book
 	public void borrowBook(String bookName, String memberName) {
-	    if (!memberBorrowedBooks.containsKey(memberName)) {
-	        System.out.println("Member " + memberName + " not found.");
-	        return;
-	    }
-
-	    if (availableBooks.contains(bookName)) {
-	        availableBooks.remove(bookName);
-	        memberBorrowedBooks.get(memberName).add(bookName);
-	        System.out.println(memberName + " has successfully borrowed " + bookName);
-	    } else {
-	        System.out.println(bookName + " is either already borrowed or not available.");
-	    }
-	}
-	// Return a book to the library
-	public void returnBook(String bookName, String memberName) {
-	    if (!memberBorrowedBooks.containsKey(memberName)) {
-	        System.out.println("Member " + memberName + " not found.");
-	        return;
-	    }
-
-	    if (memberBorrowedBooks.get(memberName).contains(bookName)) {
-	        memberBorrowedBooks.get(memberName).remove(bookName);
-	        availableBooks.add(bookName);
-	        System.out.println(memberName + " has successfully returned " + bookName);
-	    } else {
-	        System.out.println(memberName + " didn't borrow " + bookName);
-	    }
+		Book book = findBookByTitle(bookName);
+		Member member = findMemberByName(memberName);
+		member.borrowBook(book);
 	}
 	// Find member and if found print name
-	public void findMemberByName(String name) {
-		if (memberBorrowedBooks.containsKey(name)) {
-			System.out.println(name + " has been registered already.");
+	public Member findMemberByName(String name) {
+		if (registeredMembers.containsKey(name)) {
+			return registeredMembers
 		}
 		else {
 			System.out.println(name + " has not yet been registered.");
@@ -71,8 +44,8 @@ public class Library {
 	}
 	
 	//find book by title
-	public void findBookByTitle(String title) {
-		if(availableBooks.indexOf(title) == -1) {
+	public Book findBookByTitle(String title) {
+		if(catalog.indexOf(title) == -1) {
 			System.out.println("The book " + title + " is not available");
 		}else {
 			System.out.println("The book " + title + " is available");
@@ -80,16 +53,16 @@ public class Library {
 	}
 	
 	// Show the available books in the library
-	public void showAvailableBooks() {
+	public void showcatalog() {
 	    System.out.println("Available Books:");
-	    for (String book : availableBooks) {
+	    for (String book : catalog) {
 	        System.out.println(book);
 	    }
 	}
 	//Show members of in the library
 	public void showMembers() {
 	   System.out.println("Library members:");
-	   for (String member : memberBorrowedBooks.keySet()) {
+	   for (String member : registeredMembers.keySet()) {
 	       System.out.println(member);
 	   }
 	}
