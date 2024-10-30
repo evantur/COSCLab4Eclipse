@@ -60,6 +60,16 @@ public class Library {
 	        System.out.println(memberName + " didn't borrow " + bookName);
 	    }
 	}
+	// Find member and if found print name
+	public void findMemberByName(String name) {
+		if (memberBorrowedBooks.containsKey(name)) {
+			System.out.println(name + " has been registered already.");
+		}
+		else {
+			System.out.println(name + " has not yet been registered.");
+		}
+	}
+	
 	// Show the available books in the library
 	public void showAvailableBooks() {
 	    System.out.println("Available Books:");
