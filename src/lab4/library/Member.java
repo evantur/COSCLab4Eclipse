@@ -28,4 +28,22 @@ public class Member {
 	         System.out.println(bookName + " is either already borrowed or not available.");
 	     }
 	 }
+	
+	// getters
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getID() {
+		return this.memberId;
+	}
+	
+	// setters
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setID(int id) {
+		this.memberId = id;
+	}
 }
