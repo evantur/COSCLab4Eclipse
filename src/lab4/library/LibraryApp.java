@@ -30,10 +30,10 @@ public static void main(String[] args) {
     
     // Adding members
     System.out.println("\n *** Adding \"Alice\" to the library members");
-    library.addMember("Alice");
+    library.registerMember("Alice");
     
     System.out.println("\n *** Adding \"Bob\" to the library members");
-    library.addMember("Bob");
+    library.registerMember("Bob");
 
     // Show members
     System.out.println("\n *** Show all members");
