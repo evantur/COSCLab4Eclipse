@@ -20,12 +20,15 @@ public class Library {
 	}
 	
 	// Adds a new member to the library (without a separate class)
-	public void registerMember(String memberName) {
-	    if (!registeredMembers.contains(memberName)) {
-	    	
-	    } else {
-	    	
+	public void registerMember(Member m) {
+	    for (Member member : registeredMembers) {
+	    	if (member.getName() == m.getName()) {
+	    		System.out.println("Member already exists.");
+	    		return;
+	    	}
 	    }
+	    registeredMembers.add(m);
+	    System.out.println("Member " + m + " added.");
 	}
 	// borrow book
 	public void borrowBook(String bookName, String memberName) {
@@ -35,12 +38,12 @@ public class Library {
 	}
 	// Find member and if found print name
 	public Member findMemberByName(String name) {
-		if (registeredMembers.containsKey(name)) {
-			return registeredMembers
+		for (Member member : registeredMembers) {
+			if (member.getName() == name) {
+				return member;
+			}
 		}
-		else {
-			System.out.println(name + " has not yet been registered.");
-		}
+		return null;
 	}
 	
 	//find book by title
@@ -56,14 +59,14 @@ public class Library {
 	// Show the available books in the library
 	public void showcatalog() {
 	    System.out.println("Available Books:");
-	    for (String book : catalog) {
+	    for (Book book : catalog) {
 	        System.out.println(book);
 	    }
 	}
 	//Show members of in the library
 	public void showMembers() {
 	   System.out.println("Library members:");
-	   for (String member : registeredMembers.keySet()) {
+	   for (Member member : registeredMembers) {
 	       System.out.println(member);
 	   }
 	}
