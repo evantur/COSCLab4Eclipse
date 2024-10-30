@@ -11,26 +11,21 @@ public class Member {
 	private String name;
 	private int memberId;
 	private ArrayList<String> availableBooks = new ArrayList<>();
-	private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
+	private HashMap<String, ArrayList<String>> borrowedBooks = new HashMap<>();
 	
 	
 	public void borrowBook(String bookName, String memberName) {
-	     if (!memberBorrowedBooks.containsKey(memberName)) {
+	     if (!borrowedBooks.containsKey(memberName)) {
 	         System.out.println("Member " + memberName + " not found.");
 	         return;
 	     }
 
 	     if (availableBooks.contains(bookName)) {
 	         availableBooks.remove(bookName);
-	         memberBorrowedBooks.get(memberName).add(bookName);
+	         borrowedBooks.get(memberName).add(bookName);
 	         System.out.println(memberName + " has successfully borrowed " + bookName);
 	     } else {
 	         System.out.println(bookName + " is either already borrowed or not available.");
 	     }
 	 }
-	
-	// private borrowedbBooks TODO: implement collection of borrowed books
-	
-	// TODO: implement functionality of Member class
-
 }
