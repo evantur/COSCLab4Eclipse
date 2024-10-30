@@ -21,7 +21,7 @@ public class Library {
 	}
 	
 	// Adds a new member to the library (without a separate class)
-	public void addMember(String memberName) {
+	public void registerMember(String memberName) {
 	    if (!memberBorrowedBooks.containsKey(memberName)) {
 	        memberBorrowedBooks.put(memberName, new ArrayList<>());
 	        System.out.println("Member " + memberName + " has been added.");
