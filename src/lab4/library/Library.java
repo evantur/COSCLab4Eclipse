@@ -70,6 +70,15 @@ public class Library {
 		}
 	}
 	
+	//find book by title
+	public void findBookByTitle(String title) {
+		if(availableBooks.indexOf(title) == -1) {
+			System.out.println("The book " + title + " is not available");
+		}else {
+			System.out.println("The book " + title + " is available");
+		}
+	}
+	
 	// Show the available books in the library
 	public void showAvailableBooks() {
 	    System.out.println("Available Books:");
