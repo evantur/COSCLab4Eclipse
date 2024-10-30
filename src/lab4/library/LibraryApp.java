@@ -7,77 +7,10 @@ import java.util.Scanner;
 
 
 public class LibraryApp {
-
- private ArrayList<String> availableBooks = new ArrayList<>();
- private HashMap<String, ArrayList<String>> memberBorrowedBooks = new HashMap<>();
-
- // Adds a book to the library catalog
- public void addBook(String bookName) {
-     availableBooks.add(bookName);
-     System.out.println(bookName + " has been added to the catalog.");
- }
-
- // Adds a new member to the library (without a separate class)
- public void addMember(String memberName) {
-     if (!memberBorrowedBooks.containsKey(memberName)) {
-         memberBorrowedBooks.put(memberName, new ArrayList<>());
-         System.out.println("Member " + memberName + " has been added.");
-     } else {
-         System.out.println("Member " + memberName + " already exists.");
-     }
- }
-
- // Borrow a book from the library
- public void borrowBook(String bookName, String memberName) {
-     if (!memberBorrowedBooks.containsKey(memberName)) {
-         System.out.println("Member " + memberName + " not found.");
-         return;
-     }
-
-     if (availableBooks.contains(bookName)) {
-         availableBooks.remove(bookName);
-         memberBorrowedBooks.get(memberName).add(bookName);
-         System.out.println(memberName + " has successfully borrowed " + bookName);
-     } else {
-         System.out.println(bookName + " is either already borrowed or not available.");
-     }
- }
-
- // Return a book to the library
- public void returnBook(String bookName, String memberName) {
-     if (!memberBorrowedBooks.containsKey(memberName)) {
-         System.out.println("Member " + memberName + " not found.");
-         return;
-     }
-
-     if (memberBorrowedBooks.get(memberName).contains(bookName)) {
-         memberBorrowedBooks.get(memberName).remove(bookName);
-         availableBooks.add(bookName);
-         System.out.println(memberName + " has successfully returned " + bookName);
-     } else {
-         System.out.println(memberName + " didn't borrow " + bookName);
-     }
- }
-
- // Show the available books in the library
- public void showAvailableBooks() {
-     System.out.println("Available Books:");
-     for (String book : availableBooks) {
-         System.out.println(book);
-     }
- }
-
-//Show members of in the library
-public void showMembers() {
-   System.out.println("Library members:");
-   for (String member : memberBorrowedBooks.keySet()) {
-       System.out.println(member);
-   }
-}
   
 public static void main(String[] args) {
 	
-	 LibraryApp library = new LibraryApp();
+	 Library library = new Library();
 
 	 System.out.println(" *** Library management system demo *** ");
 	 
