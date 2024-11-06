@@ -29,8 +29,14 @@ public class Member {
 			System.out.println("Book borrowed succesfully.");
 		}
 	 }
-	public void returnBook(String bookTitle) {
-		
+	public void returnBook(Book book) {
+		if (!borrowedBooks.contains(book)) {
+			System.out.println("Member has not borrowed this book.");
+		}
+		else {
+			borrowedBooks.remove(book);
+			book.setAvailability(true);
+		}
 	}
 	
 	// getters

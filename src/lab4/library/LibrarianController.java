@@ -13,11 +13,12 @@ public class LibrarianController {
 		Member member = library.findMemberByName(memberName);
 		Book book = library.findBookByTitle(bookTitle);
 		member.borrowBook(book);
-		
 	}
 	
-	public void returnBook(String bookName, String memberName) {
-		
+	public void returnBook(String bookTitle, String memberName) {
+		Member member = library.findMemberByName(memberName);
+		Book book = library.findBookByTitle(bookTitle);
+		member.returnBook(book);
 	}
 
 }

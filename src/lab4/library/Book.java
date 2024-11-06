@@ -8,7 +8,10 @@ public class Book {
 	private boolean isAvailable; 
 	
 	// TODO: implement Book functionality 
-	
+	public Book(String title) {
+		this.title = title;
+		this.isAvailable = true;
+	}
 	
 	// getters
 	public String getTitle() {
