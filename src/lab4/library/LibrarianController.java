@@ -7,7 +7,7 @@ public class LibrarianController {
 	// Delegates tasks to the appropriate objects.
 	
 	// TODO: implement functionality of Member class
-	Library library;
+	Library library = new Library();
 	
 	public void borrowBook(String bookTitle, String memberName) {
 		Member member = library.findMemberByName(memberName);

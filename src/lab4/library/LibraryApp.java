@@ -10,19 +10,19 @@ public class LibraryApp {
   
 public static void main(String[] args) {
 	
-	 Library library = new Library();
+	 LibrarianController lc = new LibrarianController();
 
 	 System.out.println(" *** Library management system demo *** ");
 	 
     // Adding some books to the catalog
 	System.out.println("\n *** Adding \"Dune\" to the library:");
-	library.addBook(new Book("Dune"));
+	lc.addBook(new Book("Dune"));
 	
 	System.out.println("\n *** Adding \"1984\" to the library:");
-	library.addBook(new Book("1984")); 
+	lc.addBook(new Book("1984")); 
 	
 	System.out.println("\n *** Adding \"Moby Dick\" to the library:");
-    library.addBook(new Book("Moby Dick"));
+    l.addBook(new Book("Moby Dick"));
 
 //    // Show available books
 //    System.out.println("\n *** Show all books:");
@@ -41,7 +41,7 @@ public static void main(String[] args) {
     
     // Borrow a book
     System.out.println("\n *** Alice borrows Dune:");
-    library.borrowBook("Dune", "Alice");
+    lc.borrowBook("Dune", "Alice");
 //
 //    // Show available books after borrowing
 //    System.out.println("\n *** Show all books:");
