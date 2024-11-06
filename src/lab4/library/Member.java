@@ -1,7 +1,6 @@
 package lab4.library;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Member {
 

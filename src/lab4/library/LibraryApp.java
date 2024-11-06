@@ -37,6 +37,7 @@ public static void main(String[] args) {
 	System.out.println("\n *** Adding \"Bob\" to the library members");
 	lc.registerMember("Bob");
 
+	//TODO make this method in librarian controller in similar structure to the other methods there
     // Show members
     System.out.println("\n *** Show all members");
     lc.showMembers();
