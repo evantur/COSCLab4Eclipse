@@ -10,7 +10,6 @@ public class Member {
 
 	private String name;
 	private int memberId;
-	private ArrayList<String> availableBooks = new ArrayList<>();
 	private ArrayList<String> borrowedBooks = new ArrayList<>();
 	
 	public Member(String name, int memberId, ArrayList<String> availableBooks, ArrayList<String> borrowedBooks) {
@@ -36,7 +35,7 @@ public class Member {
 	         System.out.println(book.getTitle() + " is either already borrowed or not available.");
 	     }
 	 }
-	public void returnBook(Book book, Member) {
+	public void returnBook(String bookTitle) {
 		
 	}
 	
