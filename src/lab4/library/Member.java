@@ -10,9 +10,9 @@ public class Member {
 
 	private String name;
 	private int memberId;
-	private ArrayList<String> borrowedBooks = new ArrayList<>();
+	private ArrayList<Book> borrowedBooks = new ArrayList<>();
 	
-	public Member(String name, int memberId, ArrayList<String> borrowedBooks) {
+	public Member(String name, int memberId, ArrayList<Book> borrowedBooks) {
 		this.name = name;
 		this.memberId = memberId;
 		this.borrowedBooks = borrowedBooks;
@@ -20,19 +20,14 @@ public class Member {
 	
 	
 	public void borrowBook(Book book) {
-		String memberName = name;
-	     if (!borrowedBooks.contains(memberName)) {
-	         System.out.println("Member " + memberName + " not found.");
-	         return;
-	     }
-
-	     if (availableBooks.contains(bookTitle)) {
-	         availableBooks.remove(bookTitle);
-	         borrowedBooks.get(memberName).add(bookTitle);
-	         System.out.println(memberName + " has successfully borrowed " + bookTitle);
-	     } else {
-	         System.out.println(book.getTitle() + " is either already borrowed or not available.");
-	     }
+		if (book.getAvailability() == false) {
+			System.out.println("Book is not available.");
+		}
+		else {
+			book.setAvailability(false);
+			borrowedBooks.add(book);
+			System.out.println("Book borrowed succesfully.");
+		}
 	 }
 	public void returnBook(String bookTitle) {
 		
