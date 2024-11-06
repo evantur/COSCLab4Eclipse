@@ -19,7 +19,7 @@ public class Member {
 	}
 	
 	
-	public void borrowBook(String bookTitle) {
+	public void borrowBook(Book book) {
 		String memberName = name;
 	     if (!borrowedBooks.contains(memberName)) {
 	         System.out.println("Member " + memberName + " not found.");
