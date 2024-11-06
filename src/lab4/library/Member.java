@@ -11,23 +11,34 @@ public class Member {
 	private String name;
 	private int memberId;
 	private ArrayList<String> availableBooks = new ArrayList<>();
-	private HashMap<String, ArrayList<String>> borrowedBooks = new HashMap<>();
+	private ArrayList<String> borrowedBooks = new ArrayList<>();
+	
+	public Member(String name, int memberId, ArrayList<String> availableBooks, ArrayList<String> borrowedBooks) {
+		this.name = name;
+		this.memberId = memberId;
+		this.availableBooks = availableBooks;
+		this.borrowedBooks = borrowedBooks;
+	}
 	
 	
-	public void borrowBook(Book book) {
-	     if (!borrowedBooks.containsKey(memberName)) {
+	public void borrowBook(String bookTitle) {
+		String memberName = name;
+	     if (!borrowedBooks.contains(memberName)) {
 	         System.out.println("Member " + memberName + " not found.");
 	         return;
 	     }
 
-	     if (availableBooks.contains(bookName)) {
-	         availableBooks.remove(bookName);
-	         borrowedBooks.get(memberName).add(bookName);
-	         System.out.println(memberName + " has successfully borrowed " + bookName);
+	     if (availableBooks.contains(bookTitle)) {
+	         availableBooks.remove(bookTitle);
+	         borrowedBooks.get(memberName).add(bookTitle);
+	         System.out.println(memberName + " has successfully borrowed " + bookTitle);
 	     } else {
-	         System.out.println(bookName + " is either already borrowed or not available.");
+	         System.out.println(book.getTitle() + " is either already borrowed or not available.");
 	     }
 	 }
+	public void returnBook(Book book, Member) {
+		
+	}
 	
 	// getters
 	public String getName() {
