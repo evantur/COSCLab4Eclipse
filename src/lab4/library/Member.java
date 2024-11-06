@@ -15,7 +15,6 @@ public class Member {
 		this.name = name;
 	}
 	
-	
 	public void borrowBook(Book book) {
 		if (book.getAvailability() == false) {
 			System.out.println("Book is not available.");

@@ -14,7 +14,6 @@ public class LibrarianController {
 		Book book = library.findBookByTitle(bookTitle);
 		member.borrowBook(book);
 	}
-	
 	public void returnBook(String bookTitle, String memberName) {
 		Member member = library.findMemberByName(memberName);
 		Book book = library.findBookByTitle(bookTitle);
@@ -24,5 +23,11 @@ public class LibrarianController {
 		Book book = new Book(bookTitle);
 		library.addBook(book);
 	}
-
+	public void registerMember(String name) {
+		Member member = new Member(name);
+		library.registerMember(member);
+	}
+	public void showCatalog() {
+		library.showCatalog();
+	}
 }

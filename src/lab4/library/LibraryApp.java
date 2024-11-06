@@ -11,26 +11,28 @@ public class LibraryApp {
 public static void main(String[] args) {
 	
 	 Library library = new Library();
+	 
+	 LibrarianController lc = new LibrarianController();
 
 	 System.out.println(" *** Library management system demo *** ");
 	 
     // Adding some books to the catalog
-	System.out.println("\n *** Adding \"Dune\" to the library:");
-	library.addBook(new Book("Dune"));
+	System.out.println("\n *** Adding \"Dune\" to the lc:");
+	lc.addBook("Dune");
 	
-	System.out.println("\n *** Adding \"1984\" to the library:");
-	library.addBook(new Book("1984")); 
+	System.out.println("\n *** Adding \"1984\" to the lc:");
+	lc.addBook("1984"); 
 	
-	System.out.println("\n *** Adding \"Moby Dick\" to the library:");
-    library.addBook(new Book("Moby Dick"));
+	System.out.println("\n *** Adding \"Moby Dick\" to the lc:");
+    lc.addBook("Moby Dick");
 
 //    // Show available books
       System.out.println("\n *** Show all books:");
-      library.showCatalog();
+      lc.showCatalog();
 //    
 //    // Adding members
-      System.out.println("\n *** Adding \"Alice\" to the library members");
-      library.registerMember(MemberAlice);
+      System.out.println("\n *** Adding \"Alice\" to the lc members");
+      lc.registerMember("Alice");
 //    
 //    System.out.println("\n *** Adding \"Bob\" to the library members");
 //    library.registerMember("Bob");
@@ -70,11 +72,11 @@ public static void main(String[] args) {
 //    library.showAvailableBooks();
 //
 //    System.out.println("\n *** Bob borrows Dune:") ;
-      LibrarianController.borrowBook("Dune", "Bob");
+//      LibrarianController.borrowBook("Dune", "Bob");
    
 //    // Show available books after borrowing
-      System.out.println("\n *** Show all books:");
-      library.showCatalog();
+//      System.out.println("\n *** Show all books:");
+//      library.showCatalog();
 
 	}
 }
