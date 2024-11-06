@@ -8,9 +8,10 @@ public class LibrarianController {
 	
 	// TODO: implement functionality of Member class
 	Library library;
+	Member member;
 	
-	public void borrowBook(String bookName, String memberName) {
-		library.borrowBook(bookName, memberName);
+	public void borrowBook(String bookTitle) {
+		member.borrowBook(bookTitle);
 	}
 	
 	public void returnBook(String bookName, String memberName) {

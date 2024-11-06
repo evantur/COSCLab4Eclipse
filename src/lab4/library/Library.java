@@ -30,12 +30,7 @@ public class Library {
 	    registeredMembers.add(m);
 	    System.out.println("Member " + m + " added.");
 	}
-	// borrow book
-	public void borrowBook(String bookName, String memberName) {
-		Book book = findBookByTitle(bookName);
-		Member member = findMemberByName(memberName);
-		member.borrowBook(book);
-	}
+	
 	// Find member and if found print name
 	public Member findMemberByName(String name) {
 		for (Member member : registeredMembers) {
