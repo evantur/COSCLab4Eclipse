@@ -12,10 +12,9 @@ public class Member {
 	private int memberId;
 	private ArrayList<String> borrowedBooks = new ArrayList<>();
 	
-	public Member(String name, int memberId, ArrayList<String> availableBooks, ArrayList<String> borrowedBooks) {
+	public Member(String name, int memberId, ArrayList<String> borrowedBooks) {
 		this.name = name;
 		this.memberId = memberId;
-		this.availableBooks = availableBooks;
 		this.borrowedBooks = borrowedBooks;
 	}
 	
