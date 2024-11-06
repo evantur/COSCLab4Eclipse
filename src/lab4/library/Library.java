@@ -51,13 +51,23 @@ public class Library {
 		return null;
 	}
 	
-	// Show the available books in the library
+	// Show the all books in the library
 	public void showCatalog() {
-	    System.out.println("Available Books:");
+	    System.out.println("Books:");
 	    for (Book book : catalog) {
 	        System.out.println(book.getTitle());
 	    }
 	}
+	
+	// Show the all books in the library
+		public void showAvailableBooks() {
+		    System.out.println("Available Books:");
+		    for (Book book : catalog) {
+		    	if(book.getAvailability()) {
+			        System.out.println(book.getTitle());
+		    	}
+		    }
+		}
 	//Show members of in the library
 	public void showMembers() {
 	   System.out.println("Library members:");

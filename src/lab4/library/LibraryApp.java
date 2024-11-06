@@ -33,50 +33,50 @@ public static void main(String[] args) {
 //    // Adding members
       System.out.println("\n *** Adding \"Alice\" to the lc members");
       lc.registerMember("Alice");
-//    
-//    System.out.println("\n *** Adding \"Bob\" to the library members");
-//    library.registerMember("Bob");
-//
-//    // Show members
-//    System.out.println("\n *** Show all members");
-//    library.showMembers();
-//    
-//    // Borrow a book
-//    System.out.println("\n *** Alice borrows Dune:");
-//    library.borrowBook("Dune", "Alice");
-//
-//    // Show available books after borrowing
-//    System.out.println("\n *** Show all books:");
-//    library.showAvailableBooks();
-//
-//    System.out.println("\n *** Bob borrows 1984:");
-//    library.borrowBook("1984", "Bob");
-//    
-//    // Show available books after borrowing
-//    System.out.println("\n *** Show all books:");
-//    library.showAvailableBooks();
-//    
-//    System.out.println("\nBob borrows Dune:");
-//    library.borrowBook("Dune", "Bob");
-//    
-//    // Show available books after borrowing
-//    System.out.println("\n *** Show all books:");
-//    library.showAvailableBooks();
-//    
-//    // Return a book
-//    System.out.println("\n *** Alice returns Dune:");
-//    library.returnBook("Dune", "Alice");
-//
-//    // Show available books after returning
-//    System.out.println("\n *** Show all books:");
-//    library.showAvailableBooks();
-//
-//    System.out.println("\n *** Bob borrows Dune:") ;
-//      LibrarianController.borrowBook("Dune", "Bob");
+    
+	System.out.println("\n *** Adding \"Bob\" to the library members");
+	lc.registerMember("Bob");
+
+    // Show members
+    System.out.println("\n *** Show all members");
+    lc.showMembers();
+    
+    // Borrow a book
+    System.out.println("\n *** Alice borrows Dune:");
+    lc.borrowBook("Dune", "Alice");
+
+    // Show available books after borrowing
+    System.out.println("\n *** Show all books:");
+    lc.showAvailableBooks();
+
+    System.out.println("\n *** Bob borrows 1984:");
+    lc.borrowBook("1984", "Bob");
+    
+    // Show available books after borrowing
+    System.out.println("\n *** Show all books:");
+    lc.showAvailableBooks();
+    
+    System.out.println("\nBob borrows Dune:");
+    lc.borrowBook("Dune", "Bob");
+    
+    // Show available books after borrowing
+    System.out.println("\n *** Show all books:");
+    lc.showAvailableBooks();
+    
+    // Return a book
+    System.out.println("\n *** Alice returns Dune:");
+    lc.returnBook("Dune", "Alice");
+
+    // Show available books after returning
+    System.out.println("\n *** Show all books:");
+    lc.showAvailableBooks();
+
+    System.out.println("\n *** Bob borrows Dune:") ;
+    lc.borrowBook("Dune", "Bob");
    
-//    // Show available books after borrowing
-//      System.out.println("\n *** Show all books:");
-//      library.showCatalog();
+    // Show available books after borrowing
+    System.out.println("\n *** Show all books:");
+    lc.showCatalog();
 
 	}
 }
