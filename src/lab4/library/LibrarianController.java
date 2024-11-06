@@ -20,5 +20,9 @@ public class LibrarianController {
 		Book book = library.findBookByTitle(bookTitle);
 		member.returnBook(book);
 	}
+	public void addBOok(String bookTitle) {
+		Book book = new Book(bookTitle);
+		library.addBook(book);
+	}
 
 }

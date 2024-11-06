@@ -15,6 +15,7 @@ public class Library {
 	// Methods:
 	// Adds a book to the library catalog
 	public void addBook(Book book) {
+		
 	    catalog.add(book);
 	    System.out.println(book.getTitle() + " has been added to the catalog.");
 	}
@@ -28,7 +29,7 @@ public class Library {
 	    	}
 	    }
 	    registeredMembers.add(m);
-	    System.out.println("Member " + m.getName() + " added.");
+	    System.out.println("Member " + m + " added.");
 	}
 	
 	// Find member and if found print name
@@ -52,7 +53,7 @@ public class Library {
 	}
 	
 	// Show the available books in the library
-	public void showcatalog() {
+	public void showCatalog() {
 	    System.out.println("Available Books:");
 	    for (Book book : catalog) {
 	        System.out.println(book);
@@ -62,7 +63,7 @@ public class Library {
 	public void showMembers() {
 	   System.out.println("Library members:");
 	   for (Member member : registeredMembers) {
-	       System.out.println(member.getName());
+	       System.out.println(member);
 	   }
 	}
 	// TODO: implement functionality of Member class
