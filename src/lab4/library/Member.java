@@ -9,13 +9,10 @@ public class Member {
 	// Can borrow and return books.
 
 	private String name;
-	private int memberId;
 	private ArrayList<Book> borrowedBooks = new ArrayList<>();
 	
-	public Member(String name, int memberId, ArrayList<Book> borrowedBooks) {
+	public Member(String name) {
 		this.name = name;
-		this.memberId = memberId;
-		this.borrowedBooks = borrowedBooks;
 	}
 	
 	
@@ -44,16 +41,8 @@ public class Member {
 		return this.name;
 	}
 	
-	public int getID() {
-		return this.memberId;
-	}
-	
 	// setters
 	public void setName(String name) {
 		this.name = name;
-	}
-	
-	public void setID(int id) {
-		this.memberId = id;
 	}
 }

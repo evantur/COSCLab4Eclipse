@@ -28,12 +28,12 @@ public static void main(String[] args) {
 //    System.out.println("\n *** Show all books:");
 //    library.showAvailableBooks();
 //    
-//    // Adding members
-//    System.out.println("\n *** Adding \"Alice\" to the library members");
-//    library.registerMember("Alice");
-//    
-//    System.out.println("\n *** Adding \"Bob\" to the library members");
-//    library.registerMember("Bob");
+    // Adding members
+    System.out.println("\n *** Adding \"Alice\" to the library members");
+    library.registerMember(new Member("Alice"));
+    
+    System.out.println("\n *** Adding \"Bob\" to the library members");
+    library.registerMember(new Member("Bob"));
 //
 //    // Show members
 //    System.out.println("\n *** Show all members");

@@ -28,7 +28,7 @@ public class Library {
 	    	}
 	    }
 	    registeredMembers.add(m);
-	    System.out.println("Member " + m + " added.");
+	    System.out.println("Member " + m.getName() + " added.");
 	}
 	
 	// Find member and if found print name
