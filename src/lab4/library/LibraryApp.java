@@ -11,70 +11,73 @@ public class LibraryApp {
 public static void main(String[] args) {
 	
 	 Library library = new Library();
+	 
+	 LibrarianController lc = new LibrarianController();
 
 	 System.out.println(" *** Library management system demo *** ");
 	 
     // Adding some books to the catalog
-	System.out.println("\n *** Adding \"Dune\" to the library:");
-	library.addBook("Dune");
+	System.out.println("\n *** Adding \"Dune\" to the lc:");
+	lc.addBook("Dune");
 	
-	System.out.println("\n *** Adding \"1984\" to the library:");
-	library.addBook("1984"); 
+	System.out.println("\n *** Adding \"1984\" to the lc:");
+	lc.addBook("1984"); 
 	
-	System.out.println("\n *** Adding \"Moby Dick\" to the library:");
-    library.addBook("Moby Dick");
+	System.out.println("\n *** Adding \"Moby Dick\" to the lc:");
+    lc.addBook("Moby Dick");
 
-    // Show available books
-    System.out.println("\n *** Show all books:");
-    library.showAvailableBooks();
+//    // Show available books
+      System.out.println("\n *** Show all books:");
+      lc.showCatalog();
+//    
+//    // Adding members
+      System.out.println("\n *** Adding \"Alice\" to the lc members");
+      lc.registerMember("Alice");
     
-    // Adding members
-    System.out.println("\n *** Adding \"Alice\" to the library members");
-    library.registerMember("Alice");
-    
-    System.out.println("\n *** Adding \"Bob\" to the library members");
-    library.registerMember("Bob");
+	System.out.println("\n *** Adding \"Bob\" to the library members");
+	lc.registerMember("Bob");
 
+	//TODO make this method in librarian controller in similar structure to the other methods there
     // Show members
     System.out.println("\n *** Show all members");
-    library.showMembers();
+    lc.showMembers();
     
     // Borrow a book
     System.out.println("\n *** Alice borrows Dune:");
-    library.borrowBook("Dune", "Alice");
+    lc.borrowBook("Dune", "Alice");
 
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
-    library.showAvailableBooks();
+    lc.showAvailableBooks();
 
     System.out.println("\n *** Bob borrows 1984:");
-    library.borrowBook("1984", "Bob");
+    lc.borrowBook("1984", "Bob");
     
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
-    library.showAvailableBooks();
+    lc.showAvailableBooks();
     
     System.out.println("\nBob borrows Dune:");
-    library.borrowBook("Dune", "Bob");
+    lc.borrowBook("Dune", "Bob");
     
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
-    library.showAvailableBooks();
+    lc.showAvailableBooks();
     
     // Return a book
     System.out.println("\n *** Alice returns Dune:");
-    library.returnBook("Dune", "Alice");
+    lc.returnBook("Dune", "Alice");
 
     // Show available books after returning
     System.out.println("\n *** Show all books:");
-    library.showAvailableBooks();
+    lc.showAvailableBooks();
 
     System.out.println("\n *** Bob borrows Dune:") ;
-    library.borrowBook("Dune", "Bob");
-    
+    lc.borrowBook("Dune", "Bob");
+   
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
-    library.showAvailableBooks();
+    lc.showCatalog();
 
 	}
 }

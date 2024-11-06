@@ -1,6 +1,5 @@
 package lab4.library;
 import java.util.ArrayList;
-import java.util.HashMap;
 public class Library {
 	
 	//  GRASP Principles: Creator, Controller
@@ -28,14 +27,9 @@ public class Library {
 	    	}
 	    }
 	    registeredMembers.add(m);
-	    System.out.println("Member " + m + " added.");
+	    System.out.println("Member " + m.getName() + " added.");
 	}
-	// borrow book
-	public void borrowBook(String bookName, String memberName) {
-		Book book = findBookByTitle(bookName);
-		Member member = findMemberByName(memberName);
-		member.borrowBook(book);
-	}
+	
 	// Find member and if found print name
 	public Member findMemberByName(String name) {
 		for (Member member : registeredMembers) {
@@ -56,13 +50,23 @@ public class Library {
 		return null;
 	}
 	
-	// Show the available books in the library
-	public void showcatalog() {
-	    System.out.println("Available Books:");
+	// Show the all books in the library
+	public void showCatalog() {
+	    System.out.println("Books:");
 	    for (Book book : catalog) {
-	        System.out.println(book);
+	        System.out.println(book.getTitle());
 	    }
 	}
+	
+	// Show the all books in the library
+		public void showAvailableBooks() {
+		    System.out.println("Available Books:");
+		    for (Book book : catalog) {
+		    	if(book.getAvailability()) {
+			        System.out.println(book.getTitle());
+		    	}
+		    }
+		}
 	//Show members of in the library
 	public void showMembers() {
 	   System.out.println("Library members:");
@@ -70,6 +74,6 @@ public class Library {
 	       System.out.println(member);
 	   }
 	}
-	// TODO: implement functionality of Member class
+	// DONE: implement functionality of Member class
 
 }
