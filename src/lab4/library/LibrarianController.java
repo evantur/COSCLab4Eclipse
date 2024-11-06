@@ -6,7 +6,7 @@ public class LibrarianController {
 	// Handles user requests like borrowing and returning books.
 	// Delegates tasks to the appropriate objects.
 	
-	// TODO: implement functionality of Member class
+	// DONE: implement functionality of Member class
 	Library library = new Library();
 	
 	public void borrowBook(String bookTitle, String memberName) {

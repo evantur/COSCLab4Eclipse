@@ -1,6 +1,5 @@
 package lab4.library;
 import java.util.ArrayList;
-import java.util.HashMap;
 public class Library {
 	
 	//  GRASP Principles: Creator, Controller
@@ -75,6 +74,6 @@ public class Library {
 	       System.out.println(member);
 	   }
 	}
-	// TODO: implement functionality of Member class
+	// DONE: implement functionality of Member class
 
 }
