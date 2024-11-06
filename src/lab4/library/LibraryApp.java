@@ -35,13 +35,13 @@ public static void main(String[] args) {
     System.out.println("\n *** Adding \"Bob\" to the library members");
     library.registerMember(new Member("Bob"));
 //
-//    // Show members
-//    System.out.println("\n *** Show all members");
-//    library.showMembers();
-//    
-//    // Borrow a book
-//    System.out.println("\n *** Alice borrows Dune:");
-//    library.borrowBook("Dune", "Alice");
+    // Show members
+    System.out.println("\n *** Show all members");
+    library.showMembers();
+    
+    // Borrow a book
+    System.out.println("\n *** Alice borrows Dune:");
+    library.borrowBook("Dune", "Alice");
 //
 //    // Show available books after borrowing
 //    System.out.println("\n *** Show all books:");

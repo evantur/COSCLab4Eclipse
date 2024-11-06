@@ -62,7 +62,7 @@ public class Library {
 	public void showMembers() {
 	   System.out.println("Library members:");
 	   for (Member member : registeredMembers) {
-	       System.out.println(member);
+	       System.out.println(member.getName());
 	   }
 	}
 	// TODO: implement functionality of Member class
