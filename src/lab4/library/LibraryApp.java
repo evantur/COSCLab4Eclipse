@@ -10,11 +10,11 @@ public class LibraryApp {
   
 public static void main(String[] args) {
 	
-	 Library library = new Library();
+	Library library = new Library();
 	 
-	 LibrarianController lc = new LibrarianController();
+	LibrarianController lc = new LibrarianController();
 
-	 System.out.println(" *** Library management system demo *** ");
+	System.out.println(" *** Library management system demo *** ");
 	 
     // Adding some books to the catalog
 	System.out.println("\n *** Adding \"Dune\" to the lc:");
@@ -26,13 +26,13 @@ public static void main(String[] args) {
 	System.out.println("\n *** Adding \"Moby Dick\" to the lc:");
     lc.addBook("Moby Dick");
 
-//    // Show available books
-      System.out.println("\n *** Show all books:");
-      lc.showCatalog();
-//    
-//    // Adding members
-      System.out.println("\n *** Adding \"Alice\" to the lc members");
-      lc.registerMember("Alice");
+    // Show available books
+	System.out.println("\n *** Show all books:");
+	lc.showCatalog();
+    
+    // Adding members
+    System.out.println("\n *** Adding \"Alice\" to the lc members");
+    lc.registerMember("Alice");
     
 	System.out.println("\n *** Adding \"Bob\" to the library members");
 	lc.registerMember("Bob");
