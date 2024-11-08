@@ -26,13 +26,13 @@ public static void main(String[] args) {
 	System.out.println("\n *** Adding \"Moby Dick\" to the lc:");
     lc.addBook("Moby Dick");
 
-//    // Show available books
-      System.out.println("\n *** Show all books:");
-      lc.showCatalog();
-//    
-//    // Adding members
-      System.out.println("\n *** Adding \"Alice\" to the lc members");
-      lc.registerMember("Alice");
+    // Show available books
+    System.out.println("\n *** Show all books:");
+    lc.showCatalog();
+
+    // Adding members
+    System.out.println("\n *** Adding \"Alice\" to the lc members");
+    lc.registerMember("Alice");
     
 	System.out.println("\n *** Adding \"Bob\" to the library members");
 	lc.registerMember("Bob");
@@ -83,6 +83,13 @@ public static void main(String[] args) {
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
     lc.showCatalog();
+    
+    System.out.println();
+    try {
+    	lc.borrowBook("The Fellowship of the Ring", "J.R.R. Tolkien");
+    } catch (NullPointerException e) {
+    	System.out.println("");
+    }
 
 	}
 }

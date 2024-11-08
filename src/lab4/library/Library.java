@@ -32,32 +32,24 @@ public class Library {
 	
 	// Find member and if found print name
 	public Member findMemberByName(String name) {
-		try {
-			for (Member member : registeredMembers) {
-				if (member.getName() == name) {
-					return member;
-				}
+		for (Member member : registeredMembers) {
+			if (member.getName() == name) {
+				return member;
 			}
-			return null;
-		}catch(Exception e) {
-			System.out.println("Member does not exist");
 		}
+		System.out.println("Member doesn't exist in system.");
+		return null;
 	}
 	
 	//find book by title
 	public Book findBookByTitle(String title) {
-		try{
-			for (Book book : catalog) {
-				if (book.getTitle() == title) {
-					return book;
-				}
+		for (Book book : catalog) {
+			if (book.getTitle() == title) {
+				return book;
 			}
-		
-		
-			return null;
-		}catch(Exception e) {
-			System.out.println("Book does not exist in catalog");
 		}
+		System.out.println("Book is not part of the catalog.");
+		return null;
 	}
 	
 	// Show the all books in the library
