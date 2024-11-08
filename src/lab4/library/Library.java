@@ -32,22 +32,32 @@ public class Library {
 	
 	// Find member and if found print name
 	public Member findMemberByName(String name) {
-		for (Member member : registeredMembers) {
-			if (member.getName() == name) {
-				return member;
+		try {
+			for (Member member : registeredMembers) {
+				if (member.getName() == name) {
+					return member;
+				}
 			}
+			return null;
+		}catch(Exception e) {
+			System.out.println("Member does not exist");
 		}
-		return null;
 	}
 	
 	//find book by title
 	public Book findBookByTitle(String title) {
-		for (Book book : catalog) {
-			if (book.getTitle() == title) {
-				return book;
+		try{
+			for (Book book : catalog) {
+				if (book.getTitle() == title) {
+					return book;
+				}
 			}
+		
+		
+			return null;
+		}catch(Exception e) {
+			System.out.println("Book does not exist in catalog");
 		}
-		return null;
 	}
 	
 	// Show the all books in the library
@@ -71,7 +81,7 @@ public class Library {
 	public void showMembers() {
 	   System.out.println("Library members:");
 	   for (Member member : registeredMembers) {
-	       System.out.println(member);
+	       System.out.println(member.getName());
 	   }
 	}
 	// DONE: implement functionality of Member class

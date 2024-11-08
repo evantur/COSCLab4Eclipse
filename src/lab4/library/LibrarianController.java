@@ -35,6 +35,6 @@ public class LibrarianController {
 	}
 	
 	public void showMembers() {
-		Library.showMembers();
+		library.showMembers();
 	}
 }
