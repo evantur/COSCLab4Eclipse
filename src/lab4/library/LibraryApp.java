@@ -9,10 +9,13 @@ import java.util.Scanner;
 public class LibraryApp {
   
 public static void main(String[] args) {
-		 
-	 LibrarianController lc = new LibrarianController();
 
-	 System.out.println(" *** Library management system demo *** ");
+		 
+	 LibrarianController lc = new LibrarianController();	
+
+
+
+	System.out.println(" *** Library management system demo *** ");
 	 
     // Adding some books to the catalog
 	System.out.println("\n *** Adding \"Dune\" to the lc:");
@@ -25,9 +28,10 @@ public static void main(String[] args) {
     lc.addBook("Moby Dick");
 
     // Show available books
+
     System.out.println("\n *** Show all books:");
     lc.showCatalog();
-
+  
     // Adding members
     System.out.println("\n *** Adding \"Alice\" to the lc members");
     lc.registerMember("Alice");
