@@ -9,9 +9,7 @@ import java.util.Scanner;
 public class LibraryApp {
   
 public static void main(String[] args) {
-	
-	 Library library = new Library();
-	 
+		 
 	 LibrarianController lc = new LibrarianController();
 
 	 System.out.println(" *** Library management system demo *** ");
