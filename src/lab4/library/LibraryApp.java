@@ -1,11 +1,6 @@
 package lab4.library;
 //Simplified version of Library Management System
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
-
-
 public class LibraryApp {
   
 public static void main(String[] args) {
