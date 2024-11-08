@@ -9,10 +9,11 @@ import java.util.Scanner;
 public class LibraryApp {
   
 public static void main(String[] args) {
-	
-	Library library = new Library();
-	 
-	LibrarianController lc = new LibrarianController();
+
+		 
+	 LibrarianController lc = new LibrarianController();	
+
+
 
 	System.out.println(" *** Library management system demo *** ");
 	 
@@ -27,9 +28,10 @@ public static void main(String[] args) {
     lc.addBook("Moby Dick");
 
     // Show available books
-	System.out.println("\n *** Show all books:");
-	lc.showCatalog();
-    
+
+    System.out.println("\n *** Show all books:");
+    lc.showCatalog();
+  
     // Adding members
     System.out.println("\n *** Adding \"Alice\" to the lc members");
     lc.registerMember("Alice");
@@ -37,11 +39,11 @@ public static void main(String[] args) {
 	System.out.println("\n *** Adding \"Bob\" to the library members");
 	lc.registerMember("Bob");
 
-	//TODO make showMembers() method in librarian controller in similar structure to the other methods there
+	//DONE make showMembers() method in librarian controller in similar structure to the other methods there
 	
-	//TODO also test that if a book has been borrowed, can another member attempt to borrow it
+	//DONE also test that if a book has been borrowed, can another member attempt to borrow it
 	
-	//TODO test for null pointers (if a member or book does not exist) in findBookByTitle() or findMemberByName()
+	//DONE test for null pointers (if a member or book does not exist) in findBookByTitle() or findMemberByName()
 	
     // Show members
     System.out.println("\n *** Show all members");
@@ -83,6 +85,13 @@ public static void main(String[] args) {
     // Show available books after borrowing
     System.out.println("\n *** Show all books:");
     lc.showCatalog();
+    
+    System.out.println();
+    try {
+    	lc.borrowBook("The Fellowship of the Ring", "J.R.R. Tolkien");
+    } catch (NullPointerException e) {
+    	System.out.println("");
+    }
 
 	}
 }

@@ -37,6 +37,7 @@ public class Library {
 				return member;
 			}
 		}
+		System.out.println("Member doesn't exist in system.");
 		return null;
 	}
 	
@@ -47,6 +48,7 @@ public class Library {
 				return book;
 			}
 		}
+		System.out.println("Book is not part of the catalog.");
 		return null;
 	}
 	
@@ -71,7 +73,7 @@ public class Library {
 	public void showMembers() {
 	   System.out.println("Library members:");
 	   for (Member member : registeredMembers) {
-	       System.out.println(member);
+	       System.out.println(member.getName());
 	   }
 	}
 	// DONE: implement functionality of Member class
