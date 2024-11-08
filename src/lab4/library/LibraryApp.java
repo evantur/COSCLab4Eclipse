@@ -39,9 +39,9 @@ public static void main(String[] args) {
 
 	//DONE make showMembers() method in librarian controller in similar structure to the other methods there
 	
-	//TODO also test that if a book has been borrowed, can another member attempt to borrow it
+	//DONE also test that if a book has been borrowed, can another member attempt to borrow it
 	
-	//TODO test for null pointers (if a member or book does not exist) in findBookByTitle() or findMemberByName()
+	//DONE test for null pointers (if a member or book does not exist) in findBookByTitle() or findMemberByName()
 	
     // Show members
     System.out.println("\n *** Show all members");
